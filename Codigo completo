@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Flamengo - Projeto de Paulo Daniel</title>
+  <style>
+    :root {
+      --vermelho: #e50914;
+      --preto: #0a0a0a;
+      --cinza: #1c1c1c;
+      --branco: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--preto);
+      color: var(--branco);
+      line-height: 1.6;
+      transition: all 0.3s ease;
+    }
+
+    /* MENU FIXO */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--vermelho);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: black;
+    }
+
+    /* SEÇÕES */
+    section {
+      min-height: 100vh;
+      padding: 100px 20px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    section:nth-child(even) {
+      background: var(--cinza);
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: var(--vermelho);
+    }
+
+    section p, section ul {
+      max-width: 800px;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      list-style: "⚽ ";
+      padding-left: 0;
+    }
+
+    footer {
+      background: var(--vermelho);
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* MENU DE ACESSIBILIDADE */
+    #acessibilidade {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: var(--vermelho);
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    }
+
+    #acessibilidade button {
+      display: block;
+      margin: 5px 0;
+      width: 120px;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      background: var(--preto);
+      color: var(--branco);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #acessibilidade button:hover {
+      background: #222;
+    }
+
+    /* CONTRASTE */
+    .contraste {
+      background: white !important;
+      color: black !important;
+    }
+    .contraste header {
+      background: black !important;
+    }
+    .contraste nav ul li a {
+      color: white !important;
+    }
+    .contraste section {
+      background: #eaeaea !important;
+      color: black !important;
+    }
+    .contraste footer {
+      background: black !important;
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flamengo</h1>
+    <nav>
+      <ul>
+        <li><a href="#historia">História</a></li>
+        <li><a href="#titulos">Títulos</a></li>
+        <li><a href="#jogadores">Jogadores</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MENU DE ACESSIBILIDADE -->
+  <div id="acessibilidade">
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+    <button onclick="alternarContraste()">Contraste</button>
+    <button onclick="resetar()">Resetar</button>
+  </div>
+
+  <section id="historia">
+    <h2>História</h2>
+    <p>
+      Fundado em 1895, o Flamengo é o clube de maior torcida do Brasil e um dos mais vitoriosos.  
+      Conhecido como <strong>Mengão</strong>, é símbolo de paixão, raça e conquistas que marcaram gerações.
+    </p>
+  </section>
+
+  <section id="titulos">
+    <h2>Principais Títulos</h2>
+    <ul>
+      <li>Libertadores: 1981, 2019, 2022</li>
+      <li>Mundial Interclubes: 1981</li>
+      <li>Brasileirão: 8 títulos</li>
+      <li>Copa do Brasil: 4 títulos</li>
+      <li>Supercopa do Brasil: 2 títulos</li>
+      <li>Mais de 35 Cariocas</li>
+    </ul>
+  </section>
+
+  <section id="jogadores">
+    <h2>Grandes Jogadores</h2>
+    <ul>
+      <li>Zico – maior ídolo da história</li>
+      <li>Júnior – eterno maestro</li>
+      <li>Leandro – lateral lendário</li>
+      <li>Romário – craque mundial</li>
+      <li>Gabigol – herói da Libertadores 2019</li>
+      <li>Arrascaeta – craque uruguaio atual</li>
+    </ul>
+  </section>
+
+  <section id="curiosidades">
+    <h2>Curiosidades</h2>
+    <p>
+      O lema do Flamengo é: <em>"Uma vez Flamengo, sempre Flamengo"</em>.  
+      Além do futebol, o clube também é destaque no remo e no basquete.  
+      Sua Nação Rubro-Negra é conhecida como a maior e mais apaixonada do planeta.
+    </p>
+  </section>
+
+  <footer>
+    <p>Projeto desenvolvido por Paulo Daniel © 2025</p>
+  </footer>
+
+  <script>
+    let fonte = 100;
+    let contrasteAtivo = false;
+
+    function aumentarFonte() {
+      fonte += 10;
+      document.body.style.fontSize = fonte + "%";
+    }
+
+    function diminuirFonte() {
+      if (fonte > 50) {
+        fonte -= 10;
+        document.body.style.fontSize = fonte + "%";
+      }
+    }
+
+    function alternarContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle("contraste", contrasteAtivo);
+    }
+
+    function resetar() {
+      fonte = 100;
+      document.body.style.fontSize = "100%";
+      contrasteAtivo = false;
+      document.body.classList.remove("contraste");
+    }
+  </script>
+</body>
+</html>
