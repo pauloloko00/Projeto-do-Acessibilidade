@@ -1,0 +1,145 @@
+:root {
+  --vermelho: #e50914;
+  --preto: #0a0a0a;
+  --cinza: #1c1c1c;
+  --branco: #f5f5f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--preto);
+  color: var(--branco);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* MENU FIXO */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--vermelho);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+/* SEÇÕES */
+section {
+  min-height: 100vh;
+  padding: 100px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background: var(--cinza);
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--vermelho);
+}
+
+section p, section ul {
+  max-width: 800px;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: "⚽ ";
+  padding-left: 0;
+}
+
+footer {
+  background: var(--vermelho);
+  text-align: center;
+  padding: 20px;
+}
+
+/* MENU DE ACESSIBILIDADE */
+#acessibilidade {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--vermelho);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+}
+
+#acessibilidade button {
+  display: block;
+  margin: 5px 0;
+  width: 120px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: var(--preto);
+  color: var(--branco);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#acessibilidade button:hover {
+  background: #222;
+}
+
+/* CONTRASTE */
+.contraste {
+  background: white !important;
+  color: black !important;
+}
+
+.contraste header {
+  background: black !important;
+}
+
+.contraste nav ul li a {
+  color: white !important;
+}
+
+.contraste section {
+  background: #eaeaea !important;
+  color: black !important;
+}
+
+.contraste footer {
+  background: black !important;
+  color: white !important;
+}
